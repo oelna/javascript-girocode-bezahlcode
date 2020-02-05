@@ -1,0 +1,80 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font: 100%/1.4 --system-ui, Helvetica, Arial, sans-serif;
+}
+
+body {
+	padding: 0.5em;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+}
+
+#container > * {
+	outline: 0px solid red;
+}
+
+#container #info p {
+	display: flex;
+}
+
+#container #info p label {
+	flex: 0 0 10em;
+}
+
+#container #info p input[type="text"],
+#container #info p input[type="number"],
+#container #info p textarea {
+	flex: 1 1 0;
+	font-size: 1rem;
+	padding: 0.2em;
+}
+
+#container #info p span {
+	display: flex;
+	width: 100%;
+}
+
+#container #info p span select {
+	flex-basis: 6ch;
+	margin-right: 1em;
+	font-size: 1rem;
+	padding: 0.2em;
+}
+
+.code {
+	width: 10em;
+	height: 10em;
+}
+
+.note {
+	background: #fbeeca;
+	border-radius: 0.25em;
+	padding: 0.4em 0.6em;
+	font-size: 0.85rem;
+}
+
+@media only screen and (min-width: 55em) {
+	body {
+		padding: 2em;
+	}
+
+	#container {
+		flex-direction: row;
+	}
+
+	#container > * {
+		width: 50%;
+	}
+
+	#container #codes {
+		padding-left: 1em;
+		display: flex;
+		justify-content: space-around;
+	}
+}
