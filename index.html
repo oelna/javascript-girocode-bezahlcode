@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+	<title>Bezahl- und Girocode-Generator</title>
+
+	<meta name="viewport" content="width=device-width" />
+
+	<link rel="stylesheet" href="./main.css" />
+	<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
+</head>
+<body>
+
+	<div id="container">
+		<form id="info">
+			<p><label for="recipient">Empfänger</label><input type="text" name="recipient" id="recipient" /></p>
+			<p><label for="iban">IBAN</label><input type="text" name="iban" id="iban" /></p>
+			<p><label for="bic">BIC</label><input type="text" name="bic" id="bic" /></p>
+			<p>
+				<label for="amount">Betrag</label>
+				<span>
+					<select name="currency" id="currency">
+						<option value="EUR">EUR</option>
+						<option value="USD">USD</option>
+					</select>
+					<input type="number" name="amount" id="amount" />
+				</span>
+			</p>
+			<p><label for="reason">Verwendungszweck</label><textarea rows="4" name="reason" id="reason"></textarea></p>
+			<p><input type="submit" value="Generieren" id="generate" /></p>
+			<p class="note">Achtung: Der Generator prüft die eingegebenen Daten nicht auf Richtigkeit oder Vollständigkeit. Bei unvollständiger Eingabe kann es passieren, dass die generierten Codes ungültig sind!</p>
+		</form>
+
+		<div id="codes">
+			<div id="giro">
+				<h2>Girocode</h2>
+				<div id="girocode" class="code"></div>
+			</div>
+			<div id="bezahl">
+				<h2>Bezahlcode</h2>
+				<div id="bezahlcode" class="code"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./qrcode.js"></script><!-- this is taken from https://github.com/davidshimjs/qrcodejs -->
+	<script src="./script.js"></script>
+</body>
+</html>
