@@ -129,6 +129,16 @@ const updateCode = function (e) {
 
 document.querySelector('#generate').addEventListener('click', updateCode);
 
+document.querySelectorAll('a[download]').forEach(function (ele, i) {
+	ele.addEventListener('click', function (e) {
+		const svg = e.target.parentNode.querySelector('.code svg');
+		if (!svg) { return false; }
+
+		svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+		ele.setAttribute('href', 'data:image/svg+xml;utf8,' + svg.outerHTML);
+	});
+});
+
 /*
 // fill in test data
 document.querySelector('#bic').value = 'SOLADES1PFD';

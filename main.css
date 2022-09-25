@@ -33,6 +33,7 @@ body {
 	flex: 1 1 0;
 	font-size: 1rem;
 	padding: 0.2em;
+	border: 1px solid #ddd;
 }
 
 #container #info p span {
@@ -45,6 +46,20 @@ body {
 	margin-right: 1em;
 	font-size: 1rem;
 	padding: 0.2em;
+}
+
+#codes a[download] {
+	display: inline-block;
+	margin-top: 1rem;
+	color: currentColor;
+	text-decoration: none;
+	padding: 0.2em 0.5em 0.2em;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+
+#codes a[download]:is(:hover,:focus) {
+	background-color: #f4f4f4;
 }
 
 .code {

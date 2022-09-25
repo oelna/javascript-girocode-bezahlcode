@@ -13,7 +13,7 @@ Benutzt den QR-Code Javascript-Code von [davidshimjs](https://github.com/davidsh
 
 Wünsche für die Zukunft:
 
-- Codes einfacher downloadbar machen, zB. indem das SVG als `<img>` eingebunden wird
+- Codes einfacher downloadbar machen, zB. indem das SVG als `<img>` eingebunden wird (Anmerkung: Es gibt jetzt einen Download-Button!)
 - Bessere Validierung der Eingabe
 - BIC automatisch aus der IBAN extrahieren?
 - Schöneres Design
